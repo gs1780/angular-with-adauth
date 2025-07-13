@@ -35,9 +35,9 @@ export function MSALGuardConfigFactory(): MsalGuardConfiguration {
 }
 
 @NgModule({
-  declarations: [AppComponent],
   imports: [
     BrowserModule,
+    AppComponent,
     RouterModule.forRoot(routes),
     MsalModule.forRoot(MSALInstanceFactory(), MSALGuardConfigFactory(), {
       interactionType: InteractionType.Redirect,
