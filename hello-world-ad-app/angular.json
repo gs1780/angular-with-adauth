@@ -3,6 +3,7 @@
   "version": 1,
   "defaultProject": "hello-world-ad-app",
   "projects": {
+    
     "hello-world-ad-app": {
       "projectType": "application",
       "root": "",
