@@ -1,0 +1,16 @@
+<mat-toolbar color="primary">Home</mat-toolbar>
+
+<mat-card *ngIf="(rawIdToken$ | async) as rawIdToken && (idToken$ | async) as claims && (accessToken$ | async) as access">
+  <mat-card-content>
+    <p><strong>ID Token:</strong></p>
+    <pre>{{ rawIdToken }}</pre>
+    <p><strong>Access Token:</strong></p>
+    <pre>{{ access.accessToken }}</pre>
+    <p><strong>Claims:</strong></p>
+    <pre>{{ claims | json }}</pre>
+    <button mat-raised-button color="accent" (click)="exportTokens(rawIdToken, claims, access)">Export Tokens</button>
+    <button mat-raised-button color="warn" (click)="logout()">Logout</button>
+  </mat-card-content>
+</mat-card>
+
+<mat-progress-spinner *ngIf="!(rawIdToken$ | async)" mode="indeterminate"></mat-progress-spinner>
