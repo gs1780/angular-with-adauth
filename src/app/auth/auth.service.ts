@@ -29,6 +29,6 @@ export class AuthService {
 
   acquireTokens(scopes: string[]): Observable<AuthenticationResult> {
     const account = this.msalService.instance.getActiveAccount();
-    return this.msalService.acquireTokenSilent({ scopes, account });
+    return this.msalService.acquireTokenSilent({ scopes, account: account ?? undefined });
   }
 }
