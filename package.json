@@ -25,5 +25,8 @@
     "rxjs": "^7.8.2",
     "xlsx": "^0.18.5",
     "zone.js": "^0.15.1"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular:dev-server": "latest"
   }
 }
