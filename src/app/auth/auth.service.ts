@@ -11,6 +11,12 @@ export class AuthService {
   );
 
   constructor(private msalService: MsalService, private msalBroadcastService: MsalBroadcastService) {
+    const activeAccount = this.msalService.instance.getActiveAccount();
+    const cachedAccounts = this.msalService.instance.getAllAccounts();
+    if (!activeAccount && cachedAccounts.length > 0) {
+      this.msalService.instance.setActiveAccount(cachedAccounts[0]);
+    }
+
     this.msalBroadcastService.msalSubject$
       .pipe(filter((msg: EventMessage) => msg.eventType === EventType.LOGIN_SUCCESS))
       .subscribe((result: EventMessage) => {
