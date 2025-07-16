@@ -5,11 +5,11 @@ import { HomeComponent } from './home.component';
 import { SharedMaterialModule } from '../shared/shared-material.module';
 
 @NgModule({
+  declarations: [HomeComponent],
   imports: [
     CommonModule,
     SharedMaterialModule,
     RouterModule.forChild([{ path: '', component: HomeComponent }]),
-    HomeComponent,
   ],
 })
 export class HomeModule {}

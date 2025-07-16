@@ -9,7 +9,7 @@ export const routes: Routes = [
   },
   {
     path: 'sign-off',
-    loadComponent: () => import('./sign-off.component').then(m => m.SignOffComponent),
+    loadChildren: () => import('./sign-off.module').then(m => m.SignOffModule),
   },
   { path: '', pathMatch: 'full', redirectTo: 'home' },
 ];
