@@ -11,7 +11,6 @@ import { AuthModule } from './auth/auth.module';
 import { routes } from './app.routes';
 
 @NgModule({
-  declarations: [AppComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -19,6 +18,7 @@ import { routes } from './app.routes';
     RouterModule.forRoot(routes, { initialNavigation: 'enabledBlocking' }),
     CoreModule,
     AuthModule,
+    AppComponent
   ],
   bootstrap: [AppComponent, MsalRedirectComponent],
 })
