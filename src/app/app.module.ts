@@ -18,7 +18,8 @@ import { routes } from './app.routes';
     HttpClientModule,
     RouterModule.forRoot(routes, { initialNavigation: 'enabledBlocking' }),
     CoreModule,
-    AuthModule
+    AuthModule,
+    MsalRedirectComponent
   ],
   bootstrap: [AppComponent, MsalRedirectComponent]
 })
