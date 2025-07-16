@@ -65,6 +65,5 @@
         }
       }
     }
-  },
-  "defaultProject": "angular-with-adauth"
+  }
 }
